@@ -1,27 +1,17 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+
+import HelloWorld from "./components/HelloWorld";
+import ButtonGroup from "./components/ButtonGroup";
+
+import { store } from "./store";
 
 class App extends Component {
   render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
+    const state = store.getState();
+    return [
+      <HelloWorld key={1} name={state.name} />,
+      <ButtonGroup key={2} names={["Everyone", "Carlos", "from Redux"]} />
+    ];
   }
 }
 
