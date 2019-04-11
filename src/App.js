@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-// import logo from './logo.svg';
-// import './App.css';
 import HelloWorld from "./components/HelloWorld";
+
+import { createStore } from "redux";
+const store = createStore(); // an incomplete solution
 
 class App extends Component {
   state = {
