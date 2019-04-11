@@ -1,11 +1,9 @@
 import React, { Component } from "react";
+
 import HelloWorld from "./components/HelloWorld";
 import ButtonGroup from "./components/ButtonGroup";
-import reducer from "./reducers";
-import { createStore } from "redux";
 
-const initialState = { name: "Everyone" };
-const store = createStore(reducer, initialState);
+import { store } from "./store";
 
 class App extends Component {
   render() {
