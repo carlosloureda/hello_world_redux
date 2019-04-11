@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import HelloWorld from "./components/HelloWorld";
 
+import reducer from "./reducers";
 import { createStore } from "redux";
-const store = createStore(); // an incomplete solution
+const store = createStore(reducer);
 
 class App extends Component {
   state = {
