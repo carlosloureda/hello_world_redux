@@ -3,7 +3,9 @@ import HelloWorld from "./components/HelloWorld";
 
 import reducer from "./reducers";
 import { createStore } from "redux";
-const store = createStore(reducer);
+
+const initialState = { name: "Everyone" };
+const store = createStore(reducer, initialState);
 
 class App extends Component {
   state = {
