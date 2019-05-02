@@ -9,17 +9,10 @@ class ButtonGroup extends React.Component {
     names: PropTypes.array.isRequired
   };
 
-  checkAndDispatch = (store, action) => {
-    if (action.type === "SET_NAME" && action.name === "Carlos") {
-      return alert("Don't be so self-centered");
-    }
-    store.dispatch(action);
-  };
-
   onChangeName = e => {
     let query = e.target.dataset.name;
     store.dispatch(fetchPhotoFromAPI(query));
-    this.checkAndDispatch(store, setName(query));
+    store.dispatch(setName(query));
   };
 
   render() {
