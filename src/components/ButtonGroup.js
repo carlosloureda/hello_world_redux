@@ -1,6 +1,6 @@
 import React from "react";
 import { store } from "../store";
-import { setName, fetchPhotoFromAPI } from "../actions";
+import { sayHello } from "../actions";
 
 import PropTypes from "prop-types";
 
@@ -11,8 +11,7 @@ class ButtonGroup extends React.Component {
 
   onChangeName = e => {
     let query = e.target.dataset.name;
-    store.dispatch(fetchPhotoFromAPI(query));
-    store.dispatch(setName(query));
+    store.dispatch(sayHello(query));
   };
 
   render() {

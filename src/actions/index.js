@@ -25,3 +25,10 @@ export const fetchPhotoFromAPI = query => dispatch => {
       dispatch(addPhoto(photo_url));
     });
 };
+
+export const SAY_HELLO = "SAY_HELLO";
+
+export const sayHello = name => dispatch => {
+  dispatch(setName(name));
+  dispatch(fetchPhotoFromAPI(name));
+};
