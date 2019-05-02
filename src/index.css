@@ -45,3 +45,8 @@ body {
   flex-direction: row;
   justify-content: space-around;
 }
+
+.image-block {
+  text-align: center;
+  margin-top: 10px;
+}

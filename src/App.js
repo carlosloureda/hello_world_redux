@@ -10,7 +10,10 @@ class App extends Component {
     const state = store.getState();
     return [
       <HelloWorld key={1} name={state.name} />,
-      <ButtonGroup key={2} names={["Everyone", "Carlos", "from Redux"]} />
+      <ButtonGroup
+        key={2}
+        names={["Everyone", "Carlos", "from Redux", "Cats"]}
+      />
     ];
   }
 }
