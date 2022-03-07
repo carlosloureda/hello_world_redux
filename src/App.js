@@ -1,16 +1,12 @@
-import React, { Component } from "react";
+import React from "react";
 import HelloWorld from "./components/HelloWorld";
 
 import { createStore } from "redux";
 const store = createStore(); // an incomplete solution
 
-class App extends Component {
-  state = {
-    name: "Everyone"
-  };
-  render() {
-    return <HelloWorld name={this.state.name} />;
-  }
-}
+const App = () => {
+  const [state] = React.useState({ name: "Everyone" });
+  return <HelloWorld name={state.name} />;
+};
 
 export default App;
