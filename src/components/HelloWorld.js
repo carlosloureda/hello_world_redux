@@ -1,8 +1,8 @@
 import React from "react";
-import { store } from "../store";
+import { useSelector } from "react-redux";
 
 const HelloWorld = ({ name, ...props }) => {
-  const { photo_url } = store.getState();
+  const { photo_url } = useSelector((state) => state);
   return (
     <>
       <div className="hello-world">
