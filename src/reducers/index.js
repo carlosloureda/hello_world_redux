@@ -4,7 +4,12 @@ const reducer = (state, action) => {
     case "SET_NAME":
       return {
         ...state,
-        name: action.name
+        name: action.name,
+      };
+    case "ADD_PHOTO":
+      return {
+        ...state,
+        photo_url: action.photo_url,
       };
     default:
       return state;

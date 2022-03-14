@@ -1,5 +1,6 @@
 import reducer from "../reducers";
 import { applyMiddleware, createStore } from "redux";
+import thunk from "redux-thunk";
 
 const loggerMiddleware = (store) => (next) => (action) => {
   console.log("STATE BEFORE", store.getState());
@@ -20,5 +21,5 @@ const initialState = { name: "Everyone" };
 export const store = createStore(
   reducer,
   initialState,
-  applyMiddleware(loggerMiddleware, validationMiddleware)
+  applyMiddleware(loggerMiddleware, validationMiddleware, thunk)
 );
