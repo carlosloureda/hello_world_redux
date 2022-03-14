@@ -2,7 +2,9 @@ export const setName = (text) => ({ type: "SET_NAME", name: text });
 
 export const fetchPhotoFromAPI = (query) => (dispatch) => {
   const options = {
-    headers: { Authorization: "SET YOUR PEXEL ID" },
+    headers: {
+      Authorization: process.env.REACT_APP_PEXELS_API_KEY,
+    },
   };
   fetch(
     `https://api.pexels.com/v1/search?query=${query}&per_page=1&page=1`,

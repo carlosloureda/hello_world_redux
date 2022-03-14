@@ -1,12 +1,14 @@
 import React from "react";
-import { store } from "../store";
+import { useDispatch } from "react-redux";
 import { fetchPhotoFromAPI, setName } from "../actions";
 
 const ButtonGroup = ({ names }) => {
+  const dispatch = useDispatch();
+
   const onChangeName = (e) => {
     const query = e.target.dataset.name;
-    store.dispatch(fetchPhotoFromAPI(query));
-    store.dispatch(setName(query));
+    dispatch(fetchPhotoFromAPI(query));
+    dispatch(setName(query));
   };
   return (
     <div className="btn-group">

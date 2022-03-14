@@ -1,5 +1,4 @@
 const reducer = (state, action) => {
-  console.log("action:", action);
   switch (action.type) {
     case "SET_NAME":
       return {

@@ -1,14 +1,13 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
 import HelloWorld from "./components/HelloWorld";
 import ButtonGroup from "./components/ButtonGroup";
 
-import { store } from "./store";
-
 const App = () => {
-  const state = store.getState();
+  const { name } = useSelector((state) => state);
   return [
-    <HelloWorld key={1} name={state.name} />,
+    <HelloWorld key={1} name={name} />,
     <ButtonGroup
       key={2}
       names={["Everyone", "Carlos", "from Redux", "Cats"]}
